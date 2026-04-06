@@ -1,3 +1,8 @@
+  <?php 
+      $password = '1245';
+      $name='Sara';
+      include('server/config.php');
+  ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,7 +20,10 @@
     <p id="cat-info"></p>
     <img id="dog-image-info" src="" alt="" />
     <ul>
-        
+      <li><a href="pages/users.php">Página de Utilizadores</a></li>
+    
+
+
     </ul>
   </body>
 </html>
