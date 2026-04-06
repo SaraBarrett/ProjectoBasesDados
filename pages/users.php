@@ -37,7 +37,7 @@
     <td>
       <a href="view_user.php?id=<?= $user['id'] ?>">Ver / Editar</a>
     
-      <a href="delete_user.php?id=<?= $user['id'] ?>"
+      <a href="../server/delete_user.php?id=<?=$user['id'] ?>"
             onclick="return confirm(
                 'Tem certeza que quer apagar ?')"
             style="color: #ff4444;">

@@ -40,9 +40,9 @@ INNER JOIN users on tasks.user_id = users.id"
      <td><?= htmlspecialchars($task['status']) ?></td>
       <td><?= htmlspecialchars($task['username']) ?></td>
     <td>
-      <a href="view_user.php?id=<?= $task['id'] ?>">Ver / Editar</a>
+      <a href="view_task.php?id=<?= $task['id'] ?>">Ver / Editar</a>
     
-      <a href="delete_user.php?id=<?= $task['id'] ?>"
+      <a href="../server/delete_task.php?id=<?= $task['id'] ?>"
             onclick="return confirm(
                 'Tem certeza que quer apagar ?')"
             style="color: #ff4444;">
