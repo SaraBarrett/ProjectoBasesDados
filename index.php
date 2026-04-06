@@ -23,7 +23,8 @@
       <li><a href="pages/users.php">Página de Utilizadores</a></li>
       <li><a href="pages/tasks.php">Página de Tarefas</a></li>
     
-
+  <li><a href="pages/form_user.php">Adicionar Utilizador</a></li>
+    <li><a href="pages/form_task.php">Adicionar Tarefa</a></li>
 
     </ul>
   </body>
