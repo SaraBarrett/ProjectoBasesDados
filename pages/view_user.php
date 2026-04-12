@@ -24,11 +24,34 @@ if(!$user) {
 <body>
 
 <h4>Ficha de Utilizador 👤</h4>
-<p><b>Nome:</b> <?= $user['username'] ?> </p>
-<p><b>Email:</b> <?= $user['email'] ?> </p>
-<p><b>Criado em:</b> <?= $user['created_at'] ?> </p>
-<p><b>Tipo de utilizador:</b> <?= $user['user_type'] ?> </p>
 
+<form method="POST" action="../server/update_user.php">
+  <input type="hidden" value="<?= $id ?>" name="id">
+        
+
+  <label>Username:</label>
+  <input type="text" value="<?= $user['username'] ?>" name="username" 
+         required minlength="3">
+         <br>
+  
+  <label>Email:</label>
+  <input type="email" value="<?= $user['email'] ?>" name="email" required>
+   <br>
+  
+ 
+  <label>Tipo User:</label>
+  <select name="user_type">
+    <option value="">Selecione o Tipo</option>
+    <option value="user" <?= $user['user_type'] == 'user'? 'selected': ''?> >User Normal</option>
+    <option value="admin" <?= $user['user_type'] == 'admin' ? 'selected': ''?>>Admin</option>
+  </select>
+   <br>
+    <label>Criado em:</label>
+  <input type="datetime" disabled value="<?= $user['created_at'] ?>">
+   <br>
+
+  <button type="submit">Actualizar User</button>
+</form>
     
 </body>
 </html>
