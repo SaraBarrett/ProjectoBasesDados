@@ -21,6 +21,9 @@
     <title>utilizadores</title>
 </head>
 <body>
+    <?php 
+      include('navbar.php');
+  ?>
 
 <h6>Olá, aqui tens uma lista de users</h6>
 

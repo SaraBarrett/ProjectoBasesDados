@@ -2,6 +2,7 @@
       $password = '1245';
       $name='Sara';
       include('server/config.php');
+      session_start();
   ?>
 <!doctype html>
 <html lang="en">
@@ -12,6 +13,9 @@
     <script src="js/apis.js" defer></script>
   </head>
   <body>
+
+  <?= isset($_SESSION['username']) ? '<a href="server/logout.php">Logout</a> ': '<a href="pages/login.php">Login</a> | <a href="pages/form_user.php">Registo</a>' ?>
+
     <h4>Apis</h4>
     <button id="cat-fact">🙀</button>
     <button id="dog-image">🐶</button>

@@ -14,7 +14,9 @@
   ?>
 
 
-
+    <?php 
+      include('navbar.php');
+  ?>
 <form method="POST" action="../server/create_task.php">
   <label>Título Tarefa:</label>
   <input type="text" name="title"

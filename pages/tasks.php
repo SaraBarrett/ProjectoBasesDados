@@ -22,6 +22,9 @@ INNER JOIN users on tasks.user_id = users.id"
     <title>Tarefas</title>
 </head>
 <body>
+    <?php 
+      include('navbar.php');
+  ?>
     <h5>Aqui vais ter todas as tarefas</h5>
     <table>
   <tr>

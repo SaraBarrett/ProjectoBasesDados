@@ -22,6 +22,9 @@ if(!$user) {
     <title>Detalhes do User</title>
 </head>
 <body>
+    <?php 
+      include('navbar.php');
+  ?>
 
 <h4>Ficha de Utilizador 👤</h4>
 
