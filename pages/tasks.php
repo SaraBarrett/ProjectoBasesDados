@@ -43,14 +43,17 @@ INNER JOIN users on tasks.user_id = users.id"
      <td><?= htmlspecialchars($task['status']) ?></td>
       <td><?= htmlspecialchars($task['username']) ?></td>
     <td>
-      <a href="view_task.php?id=<?= $task['id'] ?>">Ver / Editar</a>
-    
+      <?php if (isset($_SESSION['user_type'])): ?>
+        <a href="view_task.php?id=<?= $task['id'] ?>">Ver / Editar</a>
+      <?php endif; ?>
+      <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin'): ?>
       <a href="../server/delete_task.php?id=<?= $task['id'] ?>"
             onclick="return confirm(
                 'Tem certeza que quer apagar ?')"
             style="color: #ff4444;">
             Apagar
         </a>
+        <?php endif; ?>
     </td>
   </tr>
   <?php endforeach; ?>
